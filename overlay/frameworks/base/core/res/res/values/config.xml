@@ -410,4 +410,7 @@
         <item>110</item>
      </integer-array>
 
+    <!-- Enable face auth only when swiping security view -->
+    <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
+
 </resources>
