@@ -6,7 +6,9 @@
 -include device/oneplus/sm8150-common/BoardConfigCommon.mk
 
 BOARD_VENDOR := oneplus
-DEVICE_PATH := device/oneplus/hotdog
+DEVICE_PATH := device/oneplus/hotdogg
+
+TARGET_VENDOR_PROP += $(VENDOR_PATH)/vendor.prop
 
 # A/B
 AB_OTA_PARTITIONS += \
@@ -39,6 +41,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
+# SELinux
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Sensors
 SOONG_CONFIG_ONEPLUS_MSMNILE_SENSORS_ALS_POS_X := 940
