@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/hotdogg/device.mk)
 # Inherit some common PixelOS stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Inherit Google Carrier Settings (for out of box 5g support).
+$(call inherit-product, vendor/csettings/carriersettings.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_hotdogg
 PRODUCT_DEVICE := hotdogg
